@@ -3,13 +3,14 @@
 commands=()
 while true; do
 	read -p "$" comm
-	if [ ! -z $comm ]; then
-		commands+=($comm)
+	if [ ! -z "$comm" ]; then
+		commands+=("$comm")
 	else
 		break
 	fi
 done
 
-for i in ${commands[@]};do
-	echo $i
+for i in "${commands[@]}";do
+	echo $i;
+	$i
 done
