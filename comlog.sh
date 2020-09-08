@@ -17,10 +17,12 @@ if [ ! -f $logsdir ]; then
 fi
 
 cd $logsdir;
-pwd;
 ls -l;
+read -p "Name of log file: " logname
+touch $logname.txt
+chmod 644 $logname.txt
 
 for i in "${commands[@]}";do
-	echo $i;
+	echo $i >> $logname.txt;
 	#$i
 done
