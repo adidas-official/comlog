@@ -1,4 +1,5 @@
 #! /bin/bash
+# Description: App for logging commands
 
 commands=()
 logsdir="/home/spartakus/scripts/comlog/logs"
